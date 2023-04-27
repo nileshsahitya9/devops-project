@@ -63,3 +63,73 @@ subnet_config = {
     }
   }
 }
+
+
+internet_GW_config = {
+  igw01 = {
+    vpc_name = "vpc01"
+
+    tags = {
+      "Name" = "My_IGW"
+    }
+  }
+}
+
+aws_route_table_config = {
+
+  RT01 = {
+    vpc_name = "vpc01"
+    gateway_name = "igw01"
+    tags = {
+      "Name" = "Public-Route"
+    }
+  }
+
+  RT02 = {
+
+    vpc_name = "vpc01"
+    gateway_name = "igw01"
+    tags = {
+      "Name" = "Private-Route"
+    }
+    
+  }
+
+  RT03 = {
+
+    vpc_name = "vpc01"
+    gateway_name = "igw01"
+    tags = {
+      "Name" = "Private-Route"
+    }
+    
+  }
+
+}
+
+elastic_IP_config = {
+  eip01 = {
+    tags = {
+      Name = "nat01"
+    }
+  }
+   eip02 = {
+    tags = {
+      Name = "nat02"
+    }
+  }
+}
+
+nat_GW_config = {
+  natgW01 = {
+
+  }
+
+  natgW02 = {
+    
+  }
+}
+
+aws_route_table_association_config= {
+
+}

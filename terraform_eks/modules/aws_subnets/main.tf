@@ -4,3 +4,4 @@ resource "aws_subnet" "main" {
   availability_zone = var.availability_zone
   tags =  var.tags
 }
+
